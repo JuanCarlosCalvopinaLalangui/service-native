@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:io' show Platform;
+
 
 /// Displays detailed information about a SampleItem.
 class SampleItemDetailsView extends StatelessWidget {
@@ -13,11 +15,20 @@ class SampleItemDetailsView extends StatelessWidget {
 
 // Función para iniciar el servicio desde Flutter
   Future<void> _startWebSocketService() async {
-    try {
-      await platform.invokeMethod('startWebSocketService');
-    } on PlatformException catch (e) {
-      // ignore: avoid_print
-      print("Failed to start WebSocket service: '${e.message}'.");
+    if (Platform.isIOS) {
+      try {
+        await platform.invokeMethod('startWebSocket');
+      } on PlatformException catch (e) {
+        // ignore: avoid_print
+        print("Failed to start WebSocket service: '${e.message}'.");
+      }
+    } else {
+      try {
+        await platform.invokeMethod('startWebSocketService');
+      } on PlatformException catch (e) {
+        // ignore: avoid_print
+        print("Failed to start WebSocket service: '${e.message}'.");
+      }
     }
   }
   

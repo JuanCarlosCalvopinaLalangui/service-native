@@ -75,7 +75,7 @@ class WebSocketService : Service() {
 
         val uri: URI
         try {
-            uri = URI("ws://192.168.1.154:8080?token=rHXXqh0sC0BrbLrP06pQZrU8W6O%2FZq66lhCeR4ZuOZk0Haa2uXAXAZ%2Fkgg6gr2ymLDtmW1LFJKDHikNj9iIK%2BpjP0YvayQfW3czB4ooql9mNn0eiB1eDZFXjgURGlQcjOkKQFY5TxZQCl4A8EYxkrGoufAojySjhhYcHV828PBnPJVe%2B0E2ftXKw5ApjfHyDSSreHCfJa0hGOyPfILAdJPIMRgF8IvwawryfWL34HQktkpjF%2Fwemz3oNs6IRY3er948vsOp6md1AWesu1Tn0AbdHsARRN3%2BkMxnK4nH5ufutSGVR1rKgBoMaDu4pNdizj1kvgYcDkxK1HrArnuUt%2Fg%3D%3D")
+            uri = URI("ws://192.168.1.146:8080?token=rHXXqh0sC0BrbLrP06pQZrU8W6O%2FZq66lhCeR4ZuOZk0Haa2uXAXAZ%2Fkgg6gr2ymLDtmW1LFJKDHikNj9iIK%2BpjP0YvayQfW3czB4ooql9mNn0eiB1eDZFXjgURGlQcjOkKQFY5TxZQCl4A8EYxkrGoufAojySjhhYcHV828PBnPJVe%2B0E2ftXKw5ApjfHyDSSreHCfJa0hGOyPfILAdJPIMRgF8IvwawryfWL34HQktkpjF%2Fwemz3oNs6IRY3er948vsOp6md1AWesu1Tn0AbdHsARRN3%2BkMxnK4nH5ufutSGVR1rKgBoMaDu4pNdizj1kvgYcDkxK1HrArnuUt%2Fg%3D%3D")
         } catch (e: URISyntaxException) {
             e.printStackTrace()
             return
